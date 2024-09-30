@@ -31,16 +31,21 @@ function M.getlyrics(song)
     --preparing for curl
     local lyrics = ""
     local query = tostring(song)
-    query = query:gsub("%s+", "/")  
+    query = query:gsub("%s+", "%%20")  
+    query = query:gsub("@", "/")  
     local url = "https://lyrist.vercel.app/api/" .. query
     local response = curl.get(url,{
         timeout = 5000
       })
       if response.status == 200 then
         data = vim.json.decode(response.body)
-        --print(data.lyrics)
-        --print(type(data.lyrics)) 
+        if next(data) == nil then
+          lyrics = {"Lyrics NotFound Sorry :/"}
+        else
           lyrics = split_string_by_newlines(data.lyrics)
+        --print(data.lyrics)
+        --print(type(data.lyrics))
+        end
       else
         print("Error: " .. response.status .. " - " .. response.body)
       end

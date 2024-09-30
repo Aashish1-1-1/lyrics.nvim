@@ -3,6 +3,9 @@
 
 A Neovim plugin to fetch and display the lyrics of the song you're currently jamming to.
 
+## Demo
+![demo](./Demo/demo.gif)
+
 ## Why??
 
 Are you listening to a song while writing some... *well, let's call it "creative"* code, and suddenly feel the urge to sing along but have no clue what the lyrics are? Don't worry, **I got you covered**! Presenting **lyrics.nvim**, the plugin that guarantees to fetch lyrics of any song listed on Genius, right in your Neovim.
