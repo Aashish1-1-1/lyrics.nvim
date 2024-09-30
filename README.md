@@ -36,11 +36,8 @@ use 'Aashish1-1-1/lyrics.nvim'
 Once installed, just run the following command while you’re coding (or pretending to code):
 
 ```vim
-:Lyrics
+:Lyrics Artist(optional) SongName
 ```
-
-This will display the lyrics for the current song you’re listening to, fetched from Genius. No setup, no hassle—just hit the command and start singing along!
-
 ---
 
 ## 🎯 Features
