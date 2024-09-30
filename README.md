@@ -19,14 +19,26 @@ Add the following to your Neovim config to start singing along while you code.
 
 ```lua
 {
-    "Aashish1-1-1/lyrics.nvim"
+    "Aashish1-1-1/lyrics.nvim",
+    cmd = "Lyrics",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+        require("init")
+    end
 }
 ```
 
 ### For Packer.nvim
 
 ```lua
-use 'Aashish1-1-1/lyrics.nvim'
+use {
+    "Aashish1-1-1/lyrics.nvim",
+    cmd = "Lyrics",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+        require("init")
+    end
+}
 ```
 
 ---
